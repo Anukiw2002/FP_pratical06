@@ -30,7 +30,7 @@ object Student {
     }
 
     def validateInput(name: String, mark: Int, totalMark: Int): (Boolean, Option[String]) = {
-        if (name.isEmpty || totalMark <= 0 || mark < 0 || mark > totalMark) {
+        if (name.isEmpty || totalMark <= 0 || mark < 0 || mark < totalMark) {
             (false, Some("The details entered are invalid"))
         } else {
             (true, None)
